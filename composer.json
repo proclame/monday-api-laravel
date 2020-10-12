@@ -1,0 +1,36 @@
+{
+    "name": "proclame/monday-api-laravel",
+    "homepage": "https://github.com/proclame/monday-api-laravel",
+    "description": "Laravel wrapper around the monday-api package from tblack-it",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "monday"
+    ],
+    "authors": [
+        {
+            "name": "Nick Mispoulier",
+            "email": "nick@proclame.be"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.0",
+        "tblack-it/monday-api": ">=0.2.0",
+        "laravel/framework": ">=5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Proclame\\Monday\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Proclame\\Monday\\MondayServiceProvider"
+            ],
+            "aliases": {
+                "Monday": "Proclame\\Monday\\MondayFacade"
+            }
+        }
+    }
+}
