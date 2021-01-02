@@ -22,7 +22,11 @@ class MondayServiceProvider extends ServiceProvider
         $this->mergeConfigFrom(__DIR__.'/../config/monday.php', 'monday');
 
         $this->app->bind('monday', function ($app) {
-            $mondayBoard = new MondayBoard();
+            if(class_exists('\App\Services\MondayBoard')){
+                $mondayBoard = new \App\Services\MondayBoard();
+            } else {
+                $mondayBoard = new MondayBoard();
+            }
             $mondayBoard->setToken(new Token(config('monday.monday_token')));
 
             return $mondayBoard;
