@@ -2,9 +2,7 @@
 
 namespace Proclame\Monday;
 
-use Proclame\Monday\Monday;
 use TBlack\MondayAPI\Token;
-use Proclame\Monday\Connection;
 use TBlack\MondayAPI\MondayBoard;
 use Illuminate\Support\ServiceProvider;
 

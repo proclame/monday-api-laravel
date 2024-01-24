@@ -13,6 +13,12 @@
             "email": "nick@proclame.be"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/proclame/php-monday-api"
+        }
+    ],
     "require": {
         "php": ">=7.2.0",
         "tblack-it/monday-api": ">=0.2.0",
